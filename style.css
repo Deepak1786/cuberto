@@ -1,0 +1,360 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+*::selection{
+color: white;
+background-color: black;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    /* background-color: black; */
+}
+#main{
+    width: 100%;
+}
+/* Avtar */
+/* Ensure the avatar is on top of all layers */
+#main #avv {
+    position: absolute;
+    z-index: 9999; /* Bring it above all other elements */
+}
+
+#avv #avatar {
+    position: fixed;
+    top: 88vh; /* Place it near the bottom of the viewport */
+    left: 90vw; /* Align it near the right edge */
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+/* Circle containing the avatar */
+.circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Avatar image */
+.circle img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Rotating text */
+.text-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px; /* Adjust size for better alignment */
+    height: 200px; /* Double the size for the rotation effect */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    animation: rotate-text 10s linear infinite;
+    pointer-events: none; /* Prevent interaction with text */
+}
+
+/* Animation for rotating text */
+@keyframes rotate-text {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* avatar end  */
+
+
+#home{
+    height: 100vh;
+    /* background-color: rgba(159, 152, 107, 0.71); */
+}
+#nav img{
+    width: 140px;
+    padding: 5px;
+}
+#nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+#nav #right{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+#nav a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+}
+#nav i{
+    margin: 2px;
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 20px;
+}
+#home #homemain{
+    padding-top: 200px;
+    padding-left: 150px;
+}
+#homemain #headings{
+    display: flex;
+    gap:30px
+    
+}
+#headings h1{
+    font-size: 6.8vw;
+    font-weight: 900;
+letter-spacing: -5px;
+line-height: 1.1;
+-webkit-text-stroke: 2px rgba(0, 0, 0, 0.541);
+color: transparent;
+/* background-color: aqua; */
+}
+#homemain #headings h1:hover{
+    color: #000000c6;
+}
+#home #homelast{
+    padding: 150px 150px;
+}
+
+
+
+
+
+#featured{
+    padding: 10vw 10vw;
+    /* background-color: rgba(234, 222, 208, 0.645); */
+}
+#fheading>h1{
+    line-height: 0.7;
+    font-size: 6vh;
+    font-weight: 400;
+}
+#fheading>h1:nth-child(2){
+    -webkit-text-stroke: 2px rgba(0, 0, 0, 0.541);
+    color: transparent;
+}
+#fimages{
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+    margin-top: 5vw;
+    /* background-color: aqua; */
+}
+ #fleft{
+    /* overflow: auto;  */  /* auto changes to hidden */
+    overflow: hidden;
+    /* background-color: aquamarine; */
+    width: 45%;
+    height: inherit;
+}
+.fleftelm {
+    width: 100%;
+    height: inherit;
+    /* background-color: pink; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.fleftelm h1{
+    font-size: 2.5vw;
+    line-height: 1;
+    font-weight: 400;
+    margin: 1vw 0;
+}
+.fleftelm h3{
+    font-size: 1.5vw;
+    font-weight: 500;
+}
+.fleftelm h6{
+    opacity: 0.6;
+}
+#fright{
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+    /* background-color: rgb(149, 252, 101); */
+    height: inherit;
+    width: 45%;
+}
+
+#fimages #fright .images{
+    height: 90%;
+    width: 90%;
+    background-color: blueviolet;
+}
+#fright .images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.btndiv{
+    display: flex;
+    justify-content: center;
+    
+}
+.btndiv button{
+    margin-top: 2vw;
+    padding: 1vw 2vw;
+    border: 2px solid rgba(201, 194, 194, 0.836);
+    border-radius: 100px;
+    background-color: white;
+    font-weight: 500;
+    font-size: 1vw;
+    letter-spacing: -0.4px;
+}
+#dev{
+    padding: 5vw 10vw;
+}
+#dev h1{
+    width: 50%;
+    font-size: 4vw;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.2;
+}
+#dev p{
+    /* width: 50%; */
+    font-size: 1.4vw;
+    font-weight: 400;
+    margin-top: 2vw;
+    line-height: 1;
+    letter-spacing: -0.5;
+}
+
+#slides{
+    padding: 0vw 7vw;
+    display: flex;
+    justify-content: space-between;
+}
+#slide{
+    width: 30%;
+}
+#slides #slide #img{
+    /* background-image: url(Images/5462008.jpg); */
+    /* background-size: cover; */
+    overflow: hidden;
+    border-radius: 5px;
+    width: 100%;
+    height: 220px;
+}
+#slide #img img{
+  object-fit: cover;
+    width: 100%;
+    height: 220px;
+}
+#slide #tag{
+    background-color: rgb(232, 227, 227);
+    margin: 20px 10px;
+    padding: 5px 15px;
+    width: fit-content;
+    border-radius: 100px;
+}
+#slide h3{
+    font-size: 1.3vw;
+    font-weight: 500;
+}
+#footer{
+    margin-top: 5vh;
+    /* background-color: aqua; */
+    width: 100%;
+    height: 720px;
+    display: flex;
+    justify-content: center; /* Center the video horizontally */
+    align-items: center; /* Center the video vertically */
+    overflow: hidden; 
+}
+#footer video {
+    width: 100%; /* Make the video cover the full width */
+    height: 100%; /* Make the video cover the full height */
+    object-fit: cover; /* Ensure the video scales to cover the footer without distortion */
+}
+#footer #footertext{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+#footertext h1{
+    font-size: 9vw;
+    color: aliceblue;
+    font-weight: 400;
+}
+#footertext>button{
+    border-radius: 100px;
+    padding: 2vh 4vw;
+    font-size: 5vw;
+    color: white;
+    background-color: transparent;
+    border: 4px solid white;
+}
+
+/* Main footer container */
+#footerlast {
+    display: flex;
+    justify-content: space-between; /* Spread children evenly */
+    align-items: center; /* Vertically align content */
+    background-color: black; /* Match the background */
+    padding: 20px 50px; /* Add padding around the footer */
+    color: white; /* Text color */
+}
+
+/* Left section for buttons */
+#foright {
+    display: flex;
+    gap: 20px; /* Spacing between buttons */
+}
+
+#foright button {
+    padding: 10px 20px;
+    border: 2px solid white; /* Outline for buttons */
+    border-radius: 25px; /* Rounded corners */
+    background: transparent; /* Transparent background */
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#foright button:hover {
+    background: white; /* Hover effect */
+    color: black;
+}
+
+/* Center section for Privacy Policy */
+#focenter h3 {
+    margin: 0;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+
